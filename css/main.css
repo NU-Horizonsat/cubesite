@@ -389,6 +389,16 @@ nav ul li button {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   scroll-padding-bottom: 20%;
+
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#content::-webkit-scrollbar {
+  display: none;
 }
 
 .slide {
