@@ -3,18 +3,29 @@ window.onload = init;
 function init() {// Get the button
     let mybutton = document.getElementById("myBtn");
     let content = document.getElementById("content");
+    let model = document.getElementById("model");
 
 
     // When the user scrolls down 20px from the top of the document, show the button
     content.onscroll = function () { scrollFunction() };
 
     function scrollFunction() {
-        if (content.scrollTop > 20) {
+        if (content.scrollTop > 4500) {
+            model.style.opacity = 0;
+            model.style.filter = "blur(4px)"
             mybutton.style.bottom = "1%";
-            console.log("show");
+            //console.log("show");
+        }
+        else if (content.scrollTop > 20 && content.scrollTop < 4500) {
+            model.style.opacity = 1;
+            model.style.filter = "blur(4px)"
+            mybutton.style.bottom = "1%";
+            //console.log("show");
         } else {
+            model.style.opacity = 1;
+            model.style.filter = "blur(0px)"
             mybutton.style.bottom = "-5%";
-            console.log("hide");
+            //console.log("hide");
         }
     }
 }

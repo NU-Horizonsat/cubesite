@@ -290,12 +290,14 @@ nav {
   text-align: center;
   margin-left: 6vw;
   letter-spacing: 0.1vw;
+  z-index: 98;
 }
 
 ul {
   list-style-type: none;
   margin: auto;
   text-align: center;
+  z-index: 98;
 }
 
 nav ul li {
@@ -405,7 +407,7 @@ nav ul li button {
 .slide {
   background-color: rgba(0, 0, 0, 0);
   z-index: 1;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(0px);
   scroll-snap-align: start;
   padding-top: 2.5%;
   padding-bottom: 2.5%;
@@ -426,7 +428,7 @@ nav ul li button {
   font-size: 450%;
 }
 
-body model-viewer {
+#model {
   height: 100%;
   width: 100%;
   background-color: black;
@@ -435,4 +437,11 @@ body model-viewer {
   border: none;
   z-index: -99;
   scale: "0.2 0.2 0.2";
+  transition-property: opacity blur;
+  transition-duration: 0.5s;
+}
+
+#staticContent {
+  background-color: white;
+  height: 100%;
 }
