@@ -12,8 +12,8 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.z = 5; // Set camera position
 
 // Renderer
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-//renderer.setClearColor("#233143"); // Set background colour
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true});
+/renderer.setClearColor( 0x000000, 0 ); // Set background colour
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement); // Add renderer to HTML as a canvas element
 

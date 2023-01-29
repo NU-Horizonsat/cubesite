@@ -3,8 +3,9 @@
 
 html {
   overflow: auto;
-  background-image: linear-gradient(135deg, #000b1f, #000000);
+  background-image: linear-gradient(135deg, #091021, #000000);
   font-family: "Oxanium", cursive;
+  color: white;
 }
 
 body{
@@ -17,5 +18,29 @@ body{
 
 .header {
   height: 10em;
-  background-color: #ff0000;
+  background-color: transparent;
+}
+
+.header nav ul{
+  position: absolute;
+  display: flex;
+  width: 35%;
+  float: right;
+  top: 2em;
+  right: 1em;
+}
+
+.header nav ul li{
+  height: 2.5em;
+  list-style-type: none;
+  padding-left: 3em;
+  padding-right: 3em;
+  font-size: 1.25em;
+  padding-top: 1em;
+}
+
+.header nav ul li:hover {
+  background-color: rgb(255, 255, 255, 0.25);
+  transition-property: background-color;
+  transition-duration: 0.25s;
 }
