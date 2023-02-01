@@ -58,18 +58,12 @@ footer {
 
 .logo {
   height: 70px;
-  transition-property: height;
-  transition-duration: 0.25s;
-}
-
-.logo:hover {
-  height: 90px;
 }
 
 .navigation-bar ul li {
   padding: 25px;
   font-size: 18px;
-  transition-property: background-color, border-radius, font-size;
+  transition-property: background-color, border-radius;
   transition-duration: 0.25s;
 }
 
@@ -82,7 +76,6 @@ footer {
 .navigation-bar ul li:hover {
   background-color: rgb(255, 255, 255, 0.1);
   border-radius: 15px;
-  font-size: 24px;
 }
 
 .home-content {
@@ -158,22 +151,8 @@ model-viewer {
 
 .team-item a {
   color: rgb(150, 150, 255);
-  transition-property: font-size;
-  transition-duration: 0.25s;
 }
 
-.team-item h1 {
-  transition-property: font-size;
-  transition-duration: 0.25s;
-}
-
-.team-item h1:hover {
-  font-size: 72px;
-}
-
-.team-item a:hover {
-  font-size: 28px;
-}
 
 
 
@@ -185,11 +164,4 @@ model-viewer {
   height: 200px;
   border-radius: 20px;
   object-fit: cover;
-  transition-property: width, height;
-  transition-duration: 0.25s;
-}
-
-.headshot:hover {
-  width: 400px;
-  height: 300px;
 }
