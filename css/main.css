@@ -9,18 +9,18 @@ html {
 
 body {
   margin: 0;
-  padding: 20px;
+  padding: 40px;
   height: 100vh;
-  width: 100vw;
+  width: 96vw;
   /*background-image: linear-gradient(135deg, #091021, #000000);*/
   color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Nunito", sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   font-weight: 200;
   font-size: 20px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -54,11 +54,19 @@ p {
 
 .logo {
   height: 70px;
+  transition-property: height;
+  transition-duration: 0.25s;
+}
+
+.logo:hover {
+  height: 90px;
 }
 
 .navigation-bar ul li {
   padding: 25px;
   font-size: 18px;
+  transition-property: background-color, border-radius, font-size;
+  transition-duration: 0.25s;
 }
 
 .navigation-bar ul li a {
@@ -69,8 +77,8 @@ p {
 
 .navigation-bar ul li:hover {
   background-color: rgb(255, 255, 255, 0.1);
-  transition-property: background-color;
-  transition-duration: 0.25s;
+  border-radius: 15px;
+  font-size: 24px;
 }
 
 .home-content {
@@ -81,6 +89,11 @@ p {
   padding-top: 150px;
   padding-left: 75px;
   padding-right: 75px;
+}
+
+#red-sat {
+  color: rgb(200, 0, 0);
+  display: inline;
 }
 
 model-viewer {
@@ -100,8 +113,8 @@ model-viewer {
 
 .cubesat-model {
   display: inline-block;
-  height: 600px;
-  width: 15%;
+  height: 700px;
+  width: 30%;
   padding-top: 0px;
   padding-bottom: 25px;
   padding-right: 10px;
@@ -122,9 +135,57 @@ model-viewer {
   flex-direction: row;
   width: 91%;
   justify-content: space-around;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-left: 75px;
   padding-right: 75px;
   text-align: center;
-  background-color: red;
+  background-color: transparent;
+}
+
+.team-item {
+  flex-basis: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  margin-right: 100px;
+  margin-left: 100px;
+  padding: 30px;
+  border-radius: 40px;
+}
+
+.team-item a {
+  color: rgb(150, 150, 255);
+  transition-property: font-size;
+  transition-duration: 0.25s;
+}
+
+.team-item h1 {
+  transition-property: font-size;
+  transition-duration: 0.25s;
+}
+
+.team-item h1:hover {
+  font-size: 72px;
+}
+
+.team-item a:hover {
+  font-size: 28px;
+}
+
+
+
+
+
+
+.headshot {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition-property: width, height;
+  transition-duration: 0.25s;
+}
+
+.headshot:hover {
+  width: 400px;
+  height: 300px;
 }
