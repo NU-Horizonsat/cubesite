@@ -41,6 +41,10 @@ p {
   font-size: 20px;
 }
 
+footer {
+  text-align: center;
+}
+
 
 .navigation-bar ul {
   display: flex;
