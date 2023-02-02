@@ -3,14 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 html {
-  height: 100%;
+  height: 100vh;
   background-image: url(../background.jpg);
 }
 
 body {
   margin: 0;
   padding: 40px;
-  height: 100vh;
+  height: 95vh;
   width: 96vw;
   /*background-image: linear-gradient(135deg, #091021, #000000);*/
   color: white;
@@ -42,6 +42,7 @@ p {
 }
 
 footer {
+  display: block;
   text-align: center;
 }
 
@@ -84,8 +85,9 @@ footer {
   width: 95%;
   justify-content: space-around;
   padding-top: 150px;
-  padding-left: 75px;
+  padding-left: 120px;
   padding-right: 75px;
+  padding-bottom: 20px;
 }
 
 #red-sat {
@@ -164,4 +166,8 @@ model-viewer {
   height: 200px;
   border-radius: 20px;
   object-fit: cover;
+}
+
+.contact-content {
+  padding-bottom: 325px;
 }
