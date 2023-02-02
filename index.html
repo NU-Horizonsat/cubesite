@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Project Horizon</title>
   <meta charset="utf 8">
@@ -11,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="css/mobile.css" media="handheld">
 </head>
 
-<body>
+<body style="overflow: hidden;">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 
@@ -47,9 +48,9 @@
     </div>
     <div class="home-divider"></div>
     <model-viewer class="cubesat-model" src="models\CubeSatRender.glb" poster="images\modelposter.png" alt="6U CubeSat"
-      auto-rotate camera-controls touch-action="pan-y" loading="auto" rotation-per-second="20deg"
-      orientation="0deg 30deg 20deg" exposure="0.5" scale="1 1 1" camera-orbit="0deg 90deg 95%"
-      ios-src="models\CubeSatRender.glb"></model-viewer>
+      auto-rotate camera-controls disable-zoom interaction-prompt="none" touch-action="pan-y" loading="auto"
+      rotation-per-second="20deg" orientation="0deg 30deg 20deg" exposure="0.5" scale="1 1 1"
+      camera-orbit="0deg 90deg 95%" ios-src="models\CubeSatRender.glb"></model-viewer>
   </div>
   <footer>
     <hr>
