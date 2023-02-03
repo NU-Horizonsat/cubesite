@@ -11,14 +11,40 @@
 </head>
 
 <body style="overflow: hidden;">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-
-
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>function email() {
+            var name = document.getElementById('Name').value;
+            var subject = document.getElementById('Subject')
+            var email = document.getElementById('Email').value;
+            var message = document.getElementById('Message').value;
+            Email.send({
+                Host: "smtp.mailersend.net",
+                Username: "***REMOVED***",
+                Password: "***REMOVED***",
+                To: '1337american@gmail.com',
+                From: email,
+                Subject: subject,
+                Body: message
+            }).then(
+                message => alert(message)
+            );
+            /*Email.send({
+                Host: "smtp.mailersend.net",
+                Username: "***REMOVED***",
+                Password: "***REMOVED***",
+                To: 'hulbert.b@northeastern.edu',
+                From: email,
+                Subject: subject,
+                Body: message
+            }).then(
+                message => alert(message)
+            );*/
+        }</script>
     <div class="navigation-bar">
         <div id="navigation-container">
             <ul>
-                <img class="logo" src="../images/banner.png">
+                <a href="../"><img class="logo" src="../images/banner.png"></a>
                 <li><a href="../">HOME</a></li>
                 <li><a href="../teams">OUR TEAM</a></li>
                 <li><a href="../partners">PARTNERS</a></li>
@@ -28,15 +54,61 @@
     </div>
 
     <div class="contact-content">
-        <div class="row" id="head">
+        <!--div class="row" id="head">
             <h1>Contact Us</h1>
-        </div>
+        </div-->
         <div class="row" id="row-one">
-            <div class="team-item" id="email-mailto">
+            <!--div class="team-item" id="email-mailto">
                 Contact us at:
                 <a href="mailto:rao.ra@northeastern.edu?cc=hulbert.b@northeastern.edu">
                     <h1>rao.ra@northeastern.edu</h1>
                 </a>
+            </div-->
+            <div class="fcf-body">
+
+                <div id="fcf-form">
+                    <h3 class="fcf-h3">Contact Us</h3>
+
+                    <div id="fcf-form-id" class="fcf-form-class" method="post">
+
+                        <div class="fcf-form-group">
+                            <label for="Name" class="fcf-label">Your name</label>
+                            <div class="fcf-input-group">
+                                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="fcf-form-group">
+                            <label for="Email" class="fcf-label">Your email address</label>
+                            <div class="fcf-input-group">
+                                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="fcf-form-group">
+                            <label for="Subject" class="fcf-label">Your subject</label>
+                            <div class="fcf-input-group">
+                                <input type="text" id="Subject" name="Subject" class="fcf-form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="fcf-form-group">
+                            <label for="Message" class="fcf-label">Your message</label>
+                            <div class="fcf-input-group">
+                                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
+                                    required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="fcf-form-group">
+                            <button type="submit" id="fcf-button" onclick="email()"
+                                class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send
+                                Message</button>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
