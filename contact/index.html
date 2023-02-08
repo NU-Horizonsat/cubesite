@@ -11,36 +11,7 @@
 </head>
 
 <body style="overflow: hidden;">
-    <script src="https://smtpjs.com/v3/smtp.js">
     </script>
-    <script>function email() {
-            var name = document.getElementById('Name').value;
-            var subject = document.getElementById('Subject')
-            var email = document.getElementById('Email').value;
-            var message = document.getElementById('Message').value;
-            Email.send({
-                Host: "smtp.mailersend.net",
-                Username: "***REMOVED***",
-                Password: "***REMOVED***",
-                To: '1337american@gmail.com',
-                From: email,
-                Subject: subject,
-                Body: message
-            }).then(
-                message => alert(message)
-            );
-            /*Email.send({
-                Host: "smtp.mailersend.net",
-                Username: "***REMOVED***",
-                Password: "***REMOVED***",
-                To: 'hulbert.b@northeastern.edu',
-                From: email,
-                Subject: subject,
-                Body: message
-            }).then(
-                message => alert(message)
-            );*/
-        }</script>
     <div class="navigation-bar">
         <div id="navigation-container">
             <ul>
