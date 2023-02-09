@@ -1,4 +1,4 @@
-function disableScroll() {
+/*function disableScroll() {
     // Get the current page scroll position
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
@@ -11,4 +11,4 @@ function disableScroll() {
 
 function enableScroll() {
     window.onscroll = function () { };
-}
+}*/
