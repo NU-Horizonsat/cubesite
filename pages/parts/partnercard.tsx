@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import {TeamCard, useIsMobile} from "@/pages/parts/teamcard";
 

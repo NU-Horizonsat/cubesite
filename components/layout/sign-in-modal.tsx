@@ -8,7 +8,7 @@ import {
   useMemo,
 } from "react";
 import { LoadingDots, Google } from "@/components/shared/icons";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const SignInModal = ({
   showSignInModal,
