@@ -1,7 +1,6 @@
-import Image from "next/legacy/image";
-import { motion } from "framer-motion";
 import {useMediaQuery} from "react-responsive";
 import { useEffect, useState } from "react";
+import Card from "@/components/home/card";
 
 interface TeamCardProps {
     name: string;
@@ -11,18 +10,7 @@ interface TeamCardProps {
 
 const TeamCard = ({ name, head_name, image }: TeamCardProps) => {
     return (
-        <motion.div
-            className="block grow max-w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-        >
-            <div className="relative w-full h-52 mb-5">
-                <Image src={image} alt="Team Logo" layout="fill" objectFit="contain" />
-            </div>
-            <h3 className="text-2xl font-bold text-center">{name}</h3>
-            <p className="text-center">{head_name}</p>
-        </motion.div>
+        <Card title={name} description={head_name} image={image} />
     );
 };
 

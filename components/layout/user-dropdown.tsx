@@ -2,7 +2,7 @@ import { useState } from "react";
 import { signOut, useSession } from "next-auth/react";
 import { LayoutDashboard, LogOut } from "lucide-react";
 import Popover from "@/components/shared/popover";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FADE_IN_ANIMATION_SETTINGS } from "@/lib/constants";
 
@@ -57,7 +57,10 @@ export default function UserDropdown() {
             src={image || `https://avatars.dicebear.com/api/micah/${email}.svg`}
             width={40}
             height={40}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </button>
       </Popover>
     </motion.div>

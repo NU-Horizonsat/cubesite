@@ -1,25 +1,27 @@
-import { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import Balancer from "react-wrap-balancer";
+import Image from "next/image";
 
 export default function Card({
   title,
   description,
-  demo,
+  image,
   large,
 }: {
   title: string;
   description: string;
-  demo: ReactNode;
+  image: string;
   large?: boolean;
 }) {
   return (
     <div
-      className={`relative col-span-1 h-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ${
+      className={` grow relative col-span-1 h-96 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-md ${
         large ? "md:col-span-2" : ""
       }`}
     >
-      <div className="flex h-60 items-center justify-center">{demo}</div>
+      <div className="flex h-60 items-center justify-center">
+        <Image src={image} alt={title} width={200} height={0}/>
+        </div>
       <div className="mx-auto max-w-md text-center">
         <h2 className="bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold text-transparent md:text-3xl md:font-normal">
           <Balancer>{title}</Balancer>

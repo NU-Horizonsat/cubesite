@@ -5,21 +5,21 @@ import PartnerList from "@/pages/parts/partnercard";
 
 export default function Partners() {
     const partner = [{
-        name: "Partner 1",
-        logo: "/logo.png",
-        description: "Partner 1 description",
-        link: "https://www.google.com"
+        description: "The Ultrabroadband Nano-networking Laboratory is a graduate research lab on Northeastern's campus. They conduct research into advanced communications technology and are building the payload (a Terahertz band transmitter and receiver) that will ultimately fly on THIS-SAT.",
+        image: '/logo.png',
+        link: "https://google.com"
     },
         {
-            name: "Partner 2",
-            logo: "/logo.png",
+            title: "Partner 2",
             description: "Partner 2 description",
-            link: "https://www.google.com"
-        }]
+            image: '/logo.png',
+            link: "https://google.com"
+        },
+        ]
     return (
         <Layout>
             <motion.div
-                className="px-5 py-10 mx-auto max-w-7xl"
+                className="items-center justify-center"
                 initial="hidden"
                 whileInView="show"
                 animate="show"

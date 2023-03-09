@@ -8,7 +8,7 @@ import {
   useMemo,
 } from "react";
 import { LoadingDots, Google } from "@/components/shared/icons";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const SignInModal = ({
   showSignInModal,
@@ -30,7 +30,10 @@ const SignInModal = ({
               className="h-10 w-10 rounded-full"
               width={20}
               height={20}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </a>
           <h3 className="font-display text-2xl font-bold">Sign In</h3>
           <p className="text-sm text-gray-500">
