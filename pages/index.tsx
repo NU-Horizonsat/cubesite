@@ -41,7 +41,7 @@ export default function Home() {
           </motion.p>
           <motion.p className="">
             <Balancer>
-              Project Horizon's TeraHertz Band Interlink in Space SATellite (THIS-SAT) is a student led project that seeks to demonstrate the efficacy of TeraHertz band links as an alternative to the existing Optical Inter-Satellite Links (OISLs) that are predominant in the industry.
+              Project Horizon&aposs TeraHertz Band Interlink in Space SATellite (THIS-SAT) is a student led project that seeks to demonstrate the efficacy of TeraHertz band links as an alternative to the existing Optical Inter-Satellite Links (OISLs) that are predominant in the industry.
               This will pave the way for new, ultra-low cost satellite systems that expand reliable network connectivity into remote regions.
             </Balancer>
           </motion.p>
