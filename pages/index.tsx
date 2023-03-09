@@ -29,10 +29,7 @@ export default function Home() {
               className="bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
               variants={FADE_DOWN_ANIMATION_VARIANTS}
           >
-            <AcronymExpander
-                acronym_letters={['T', 'H', 'I', 'S', ' ', 'S', 'A', 'T']}
-                rest_word={['TeraHertz', 'Band', 'Interlink', 'in', 'Space', 'SATellite']}
-            />
+            <AcronymExpander/>
           </motion.h1>
           <motion.p
               className="mt-6 text-center text-gray-500 md:text-xl"
