@@ -37,17 +37,18 @@ const TeamGrid = ({ teams }: TeamGridProps) => {
 
     return (
         <div className={`flex flex-col gap-6 ${isMobile ? "flex-col" : "flex-wrap justify-center"}`}>
-            {teamsRows.map((row, index) => (
+            
+            {(teamsRows?.map((row, index) => (
                 <div key={index} className={`flex gap-6 ${isMobile ? "flex-col" : "justify-center"}`}>
                     {row.map((team, index) => (
                         <TeamCard key={index} {...team} />
                     ))}
                 </div>
-            ))}
+            )))}
         </div>
     );
 };
 
 
 
-export { TeamCard, TeamGrid };
+export default TeamGrid;

@@ -1,7 +1,7 @@
 import Layout from "@/components/layout";
 import { motion } from "framer-motion";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import {TeamGrid} from "@/pages/parts/teamcard";
+import TeamGrid from "@/pages/parts/teamcard";
 export default function Teams() {
     const admin = [
         {

@@ -30,11 +30,11 @@ interface PartnerListProps {
 const PartnerList = ({ partners }: PartnerListProps) => {
   return (
     <div className="items-center">
-      {partners.map((partner, index) => (
-        <motion.div key={index}>
-          <PartnerCard {...partner} />
-        </motion.div>
-      ))}
+      {partners?.map((partner: PartnerCardProps, index: number) => (
+  <motion.div key={index}>
+    <PartnerCard {...partner} />
+  </motion.div>
+))}
     </div>
   );
 };

@@ -46,7 +46,7 @@ const Contact = () => {
   };
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center relative col-span-1 my-10 overflow-hidden rounded-lg border border-gray-200 bg-white md:mx-20 lg:mx-32 xl:mx-32 2xl:mx-32">
+      <div className="flex flex-col items-center justify-center relative col-span-1 my-10 overflow-hidden rounded-lg border border-gray-200 bg-white mx-10 md:mx-20 lg:mx-32 xl:mx-32 2xl:mx-32">
         <h1 className="text-6xl font-bold">Contact</h1>
         {isSubmitted ? (
           <p>Thank you for your message!</p>
