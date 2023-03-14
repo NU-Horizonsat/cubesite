@@ -11,6 +11,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      backgroundImage: {
+        'bg-image': "url('../public/background.png')",
+      },
       fontFamily: {
         display: ["var(--font-sf)", "system-ui", "sans-serif"],
         default: ["var(--font-inter)", "system-ui", "sans-serif"],
