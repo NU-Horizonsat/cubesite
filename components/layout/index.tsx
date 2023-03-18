@@ -23,24 +23,23 @@ export default function Layout({
         <Meta {...meta} />
         <div className="fixed h-screen w-full bg-bg-image" />
         <div
-            className={`fixed top-0 w-full ${scrolled
-                ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
+            className={`fixed top-0 w-full transition-backdrop-blur duration-1000  ${scrolled
+                ? "backdrop-blur-xl"
                 : "bg-white/0"
                 } z-30 transition-all`}
         >
             <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
                 <Link href="/" className="flex items-center font-display text-white">
                     <Image
-                        src="/logo.png"
+                        src="/banner.png"
                         alt="Precedent logo"
-                        width="50"
-                        height="50"
+                        width="250"
+                        height="250"
                         className="mr-2 rounded-sm"
                         style={{
                             maxWidth: "100%",
                             height: "auto"
                         }}></Image>
-                    <p>Project Horizon</p>
                 </Link>
                 <div>
                     <AnimatePresence>
@@ -52,13 +51,13 @@ export default function Layout({
                             exit={{ opacity: 0 }}
                         >
                             <Link href="/teams">
-                                <p className="text-white transition-colors duration-300 hover:text-slate-500 lg:text-lg xl:text-xl">Our Team</p>
+                                <p className="text-white transition-colors duration-300 hover:text-slate-500 lg:text-lg xl:text-lg">Our Team</p>
                             </Link>
                             <Link href="/partners">
-                                <p className="text-white transition-colors duration-300 hover:text-slate-500 lg:text-lg xl:text-xl">Partners</p>
+                                <p className="text-white transition-colors duration-300 hover:text-slate-500 lg:text-lg xl:text-lg">Partners</p>
                             </Link>
                             <Link href="/contact">
-                                <p className="text-white transition-colors duration-300 hover:text-slate-500 lg:text-lg xl:text-xl">Contact</p>
+                                <p className="text-white transition-colors duration-300 hover:text-slate-500 lg:text-lg xl:text-lg">Contact</p>
                             </Link>
                         </motion.div>
                     </AnimatePresence>
@@ -68,7 +67,7 @@ export default function Layout({
         <main className=" w-full items-center justify-center py-32">
             {children}
         </main>
-        <footer className="flex flex-col items-center justify-center w-full h-32 bg-transparent backdrop-blur-xl border-none">
+        <footer className="fixed bottom-0 left-0 flex flex-col items-center justify-center w-full h-20 bg-transparent backdrop-blur-xl border-none">
             <p className="text-white text-sm">
                 © 2021 Project Horizon. All rights reserved.
             </p>

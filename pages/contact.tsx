@@ -46,8 +46,8 @@ const Contact = () => {
   };
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center relative col-span-1 my-10 overflow-hidden rounded-lg border border-gray-200 bg-white mx-10 md:mx-20 lg:mx-32 xl:mx-32 2xl:mx-32">
-        <h1 className="text-6xl font-bold">Contact</h1>
+      <div className="flex flex-col items-center justify-center relative col-span-1 my-10 overflow-hidden rounded-lg bg-black bg-opacity-50 mx-10 md:mx-20 lg:mx-32 xl:mx-32 2xl:mx-32">
+        <h1 className="text-6xl text-white pt-10 font-bold">Contact</h1>
         {isSubmitted ? (
           <p>Thank you for your message!</p>
         ) : (
@@ -76,7 +76,7 @@ const Contact = () => {
               required
             />
             <button
-              className="w-1/2 p-2 my-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                className="w-1/2 p-2 my-2 transition-bg duration-300 text-white rounded-lg hover:outline-none hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               type="submit"
               disabled={isSubmitting}
             >
