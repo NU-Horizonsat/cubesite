@@ -1,13 +1,13 @@
 import Layout from "@/components/layout";
 import { motion } from "framer-motion";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import PartnerList from "@/pages/parts/partnercard";
+import PartnerList from "@/components/parts/partnercard";
 
 export default function Partners() {
     const partner = [{
         description: " is the parent club for project horizon. AeroNU provides extended administrative capacity to project horizon, and integrates the project into the university club system. Aero NU also provides all day-to-day operational funding for project horizon.",
         image: '/partners/aeronu.png',
-        link: "https://google.com",
+        link: "https://www.aerospacenu.com/",
         linkName: "AerospaceNU",
     },
     {

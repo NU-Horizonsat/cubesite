@@ -11,6 +11,7 @@ interface TeamCardProps {
 const TeamCard = ({ name, head_name, image }: TeamCardProps) => {
     return (
         <Card title={name} description={head_name} image={image} />
+        
     );
 };
 

@@ -11,6 +11,7 @@ module.exports = {
   },
   theme: {
     extend: {
+      transform: ["group-hover"],
       backgroundImage: {
         'bg-image': "url('../public/background.png')",
       },

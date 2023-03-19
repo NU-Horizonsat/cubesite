@@ -1,7 +1,7 @@
 import Layout from "@/components/layout";
 import { motion } from "framer-motion";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import TeamGrid from "@/pages/parts/teamcard";
+import TeamGrid from "@/components/parts/teamcard";
 export default function Teams() {
     const admin = [
         {
@@ -18,7 +18,7 @@ export default function Teams() {
     const teams = [
         {
             name: 'Space Mechanics',
-            head_name: 'Alex Chiommino, Logan Cuthill',
+            head_name: 'Logan Cuthill, Alex Chiommino',
             image: '/leads/LoganAndAlex.png',
         },
         {
