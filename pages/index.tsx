@@ -1,13 +1,9 @@
 import Layout from "@/components/layout";
-import Balancer from "react-wrap-balancer";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
 import { motion } from "framer-motion";
 // @ts-ignore
-import AcronymExpander from "@/pages/parts/AcronymExpander";
 
 export default function Home() {
-  const acronym_letters = ["T", "H", "I", "S", "SAT"];
-  const rest_word = ["era", "ertz", "nterlink", "pace", "ATellite"];
   return (
     <Layout>
       <motion.div
@@ -34,7 +30,7 @@ export default function Home() {
         <motion.p
           className="m-10 bg-slate-500 bg-clip-text text-center tracking-[-0.02em] text-transparent drop-shadow-sm text-2xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}>
-          Project Horizon's TeraHertz Band Interlink in Space SATellite (THIS-SAT) is a student led project that seeks to demonstrate the efficacy of TeraHertz band links as an alternative to the existing Optical Inter-Satellite Links (OISLs) that are predominant in the industry.
+          Project Horizon&apos;s TeraHertz Band Interlink in Space SATellite (THIS-SAT) is a student led project that seeks to demonstrate the efficacy of TeraHertz band links as an alternative to the existing Optical Inter-Satellite Links (OISLs) that are predominant in the industry.
           This will pave the way for new, ultra-low cost satellite systems that expand reliable network connectivity into remote regions.
         </motion.p>
       </motion.div>
