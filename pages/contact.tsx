@@ -8,41 +8,34 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-      
+  
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const mailerSend = new MailerSend({
-      apiKey: process.env.API_KEY!,
-    });
-    // sender is email from form
-    const sentFrom = new Sender(email, name);
-    
-    const recipients = [
-      new Recipient("kapa.m@northeastern.edu", "Madhav Kapa")
-    ];
-    
-    const emailParams = new EmailParams()
-      .setFrom(sentFrom)
-      .setTo(recipients)
-      .setReplyTo(sentFrom)
-      .setSubject("This is a Subject")
-      // html content that has email, name and message 
-      .setHtml(`<p>From: ${name} <${email}></p><p>${message}</p>`)
-      .setText(`From: ${name} <${email}> ${message}`);
-    
-    await mailerSend.email.send(emailParams);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message
+        })
+      });
 
-    setIsSubmitted(true);
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        console.error('Error sending message.');
+      }
+    } catch (error) {
+      console.error(error);
+    }
 
     setIsSubmitting(false);
-
-    setName("");
-    setEmail("");
-    setMessage("");
-
   };
   return (
     <Layout>
