@@ -7,9 +7,9 @@ import useScroll from "@/lib/hooks/use-scroll";
 import Meta from "./meta";
 
 export default function Layout({
-                                   meta,
-                                   children,
-                               }: {
+    meta,
+    children,
+}: {
     meta?: {
         title?: string;
         description?: string;
@@ -21,27 +21,25 @@ export default function Layout({
 
     return <>
         <Meta {...meta} />
-        <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
+        <div className="fixed h-screen w-full bg-bg-image" />
         <div
-            className={`fixed top-0 w-full ${
-                scrolled
-                    ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
-                    : "bg-white/0"
-            } z-30 transition-all`}
+            className={`fixed top-0 w-full transition-backdrop-blur duration-1000  ${scrolled
+                ? "backdrop-blur-xl"
+                : "bg-white/0"
+                } z-30 transition-all`}
         >
             <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
-                <Link href="/" className="flex items-center font-display text-2xl">
+                <Link href="/" className="flex items-center font-display text-white">
                     <Image
-                        src="/logo.png"
+                        src="/banner.png"
                         alt="Precedent logo"
-                        width="30"
-                        height="30"
+                        width="250"
+                        height="250"
                         className="mr-2 rounded-sm"
                         style={{
                             maxWidth: "100%",
                             height: "auto"
                         }}></Image>
-                    <p>Project Horizon</p>
                 </Link>
                 <div>
                     <AnimatePresence>
@@ -53,13 +51,13 @@ export default function Layout({
                             exit={{ opacity: 0 }}
                         >
                             <Link href="/teams">
-                                <p className="text-gray-500 hover:text-gray-900 lg:text-lg xl:text-xl">Our Team</p>
+                                <p className="text-white transition-colors duration-300 hover:text-slate-500 lg:text-lg xl:text-lg">Our Team</p>
                             </Link>
                             <Link href="/partners">
-                                <p className="text-gray-500 hover:text-gray-900 lg:text-lg xl:text-xl">Partners</p>
+                                <p className="text-white transition-colors duration-300 hover:text-slate-500 lg:text-lg xl:text-lg">Partners</p>
                             </Link>
                             <Link href="/contact">
-                                <p className="text-gray-500 hover:text-gray-900 lg:text-lg xl:text-xl">Contact</p>
+                                <p className="text-white transition-colors duration-300 hover:text-slate-500 lg:text-lg xl:text-lg">Contact</p>
                             </Link>
                         </motion.div>
                     </AnimatePresence>
@@ -69,8 +67,8 @@ export default function Layout({
         <main className=" w-full items-center justify-center py-32">
             {children}
         </main>
-        <footer className="flex flex-col items-center justify-center w-full h-32 bg-white/50 backdrop-blur-xl border-t border-gray-200">
-            <p className="text-gray-500 text-sm">
+        <footer className="fixed bottom-0 left-0 flex flex-col items-center justify-center w-full h-20 bg-transparent backdrop-blur-xl border-none">
+            <p className="text-white text-sm">
                 © 2021 Project Horizon. All rights reserved.
             </p>
         </footer>
