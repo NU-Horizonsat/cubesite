@@ -90,7 +90,7 @@ export default function Home() {
         </motion.div>
         <script
           type="module"
-          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" async
         ></script>
         <div className="flex justify-end -mt-32">
   <model-viewer
