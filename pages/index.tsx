@@ -61,7 +61,7 @@ export default function Home() {
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <p>
-            Welcome to Project Horizon's <b>T</b>era<b>H</b>ertz Band <b>I</b>
+            Welcome to Project Horizon&#39;s <b>T</b>era<b>H</b>ertz Band <b>I</b>
             nterlink in Space Satellite (<b>THIS-SAT</b>) landing page!
           </p>
           <br />
