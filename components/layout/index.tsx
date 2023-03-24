@@ -69,7 +69,7 @@ export default function Layout({
         </main>
         <footer className="fixed bottom-0 left-0 flex flex-col items-center justify-center w-full h-20 bg-transparent backdrop-blur-xl border-none">
             <p className="text-white text-sm">
-                © 2021 Project Horizon. All rights reserved.
+                © 2023 Project Horizon. All rights reserved.
             </p>
         </footer>
     </>;
