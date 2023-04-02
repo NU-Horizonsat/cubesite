@@ -21,7 +21,7 @@ export default function Layout({
 
     return <>
         <Meta {...meta} />
-        <div className="fixed h-screen w-full bg-bg-image" />
+        <div className="fixed h-screen w-screen bg-bg-image bg-cover" />
         <div
             className={`fixed top-0 w-full transition-backdrop-blur duration-1000  ${scrolled
                 ? "backdrop-blur-xl"

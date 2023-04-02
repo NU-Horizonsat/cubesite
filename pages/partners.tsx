@@ -5,25 +5,41 @@ import PartnerList from "@/components/parts/partnercard";
 
 export default function Partners() {
     const partner = [{
+        title: "AeroNU",
         description: " is the parent club for project horizon. AeroNU provides extended administrative capacity to project horizon, and integrates the project into the university club system. Aero NU also provides all day-to-day operational funding for project horizon.",
         image: '/partners/aeronu.png',
         link: "https://www.aerospacenu.com/",
         linkName: "AerospaceNU",
+        width: 640,
+        height: 139,
     },
     {
-        title: "Partner 2",
+        title: "UnLab",
         description: " is a graduate research lab on Northeastern’s campus. They conduct research into advanced communications technology and are building the payload (a Terahertz band transmitter and receiver) that will ultimately fly on THIS-SAT.",
         image: '/partners/unlab.png',
-        link: "https://google.com",
+        link: "https://unlab.tech",
         linkName: "The Ultrabroadband Nano-networking Laboratory",
+        width: 640,
+        height: 192,
     },
     {
-        title: "Partner 3",
+        title: "Ansys",
         description: " has graciously provided Project Horizon with its Satellite ToolKit (STK) software which we use for orbital modeling, and determining communication times between our satellites and our ground station. To learn more about STK visit the ANSYS website.",
         image: '/partners/ansys.png',
         link: "https://google.com",
         linkName: "ANSYS",
+        width: 640,
+        height: 199,
     },
+    {
+        title: "NASA",
+        description: " is a graduate research lab on Northeastern’s campus. They conduct research into advanced communications technology and are building the payload (a Terahertz band transmitter and receiver) that will ultimately fly on THIS-SAT.",
+        image: '/partners/nasa.png',
+        link: "https://nasa.gov",
+        linkName: "NASA",
+        width: 748,
+        height: 255,
+    }
     ]
     return (
         <Layout>

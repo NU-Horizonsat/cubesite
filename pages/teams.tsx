@@ -69,7 +69,7 @@ export default function Teams() {
                     className="m-10 bg-slate-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
                     variants={FADE_DOWN_ANIMATION_VARIANTS}
                 >
-                    Admins
+                    Administration
                 </motion.h1>
                 <TeamGrid teams={admin}/>
                 <motion.h1
