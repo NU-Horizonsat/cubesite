@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       transform: ["group-hover"],
       backgroundImage: {
-        "bg-image": "url('../public/background.png')",
+        "image": "url('../public/background.png')",
       },
       fontFamily: {
         display: ["var(--font-sf)", "system-ui", "sans-serif"],

@@ -7,21 +7,6 @@ import JSXStyle from "styled-jsx/style";
 export default function Home() {
   return (
     <Layout>
-      <motion.div
-        className="m-10"
-        initial="hidden"
-        whileInView="show"
-        animate="show"
-        viewport={{ once: true }}
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.15,
-            },
-          },
-        }}
-      >
         <div className="flex flex-col justify-center items-center">
           <motion.h1
             className="sticky bg-slate-500 bg-clip-text font-display text-4xl font-bold text-center text-transparent drop-shadow-sm md:text-7xl sm:text-left"
@@ -99,9 +84,6 @@ export default function Home() {
             </JSXStyle>
           </div>
         </div>
-
-
-      </motion.div>
     </Layout>
   );
 }
