@@ -19,7 +19,7 @@ const PartnerCard = ({ alt, description, image, link, linkName, width, height }:
         <Image src={image} alt={alt} width={width} height={height} />
       </div>
       <div className="m-10 text-center">
-        <div className="text-xl tracking-tight text-slate-400 md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl">
+        <div className="text-xl tracking-tight text-white md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl">
           <a className="text-blue-700 underline" href={link}>{linkName}</a> {description}
         </div>
       </div>

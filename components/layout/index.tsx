@@ -75,6 +75,11 @@ export default function Layout({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
+                    <Link href="/about">
+                      <p className="md:text-md text-white transition-colors duration-300 hover:text-slate-500 sm:text-sm lg:text-lg xl:text-lg">
+                        About
+                      </p>
+                    </Link>
                     <Link href="/teams">
                       <p className="md:text-md text-white transition-colors duration-300 hover:text-slate-500 sm:text-sm lg:text-lg xl:text-lg">
                         Our Team
@@ -104,6 +109,11 @@ export default function Layout({
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
+                  <Link href="/about">
+                    <p className="md:text-md text-white transition-colors duration-300 hover:text-slate-500 sm:text-sm lg:text-lg xl:text-lg">
+                      About
+                    </p>
+                  </Link>
                   <Link href="/teams">
                     <p className="md:text-md text-white transition-colors duration-300 hover:text-slate-500 sm:text-sm lg:text-lg xl:text-lg">
                       Our Team

@@ -66,14 +66,14 @@ export default function Teams() {
             >
 
                 <motion.h1
-                    className="m-10 bg-slate-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
+                    className="m-10 bg-white bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
                     variants={FADE_DOWN_ANIMATION_VARIANTS}
                 >
                     Administration
                 </motion.h1>
                 <TeamGrid teams={admin}/>
                 <motion.h1
-                    className="m-10 bg-slate-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
+                    className="m-10 bg-white bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
                     variants={FADE_DOWN_ANIMATION_VARIANTS}
                 >
                     Teams

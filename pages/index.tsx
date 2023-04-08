@@ -24,7 +24,7 @@ export default function Home() {
                 </div>
                 <b>I</b>
                 <div className="inline text-[0px] transition-all duration-500 lg:group-hover:text-7xl">
-                  nterlink in{" "}
+                  n{" "}
                 </div>
                 <b>S</b>
                 <div className="inline text-[0px] transition-all duration-500 lg:group-hover:text-7xl">
@@ -59,11 +59,12 @@ export default function Home() {
               scale="5 5 5"
               camera-orbit="0deg 90deg 95%"
               ios-src="\CubeSatRender.glb"
-            ></model-viewer>
+            >
+            </model-viewer>
           </div>
           <div className="flex flex-col justify-center items-center text-center">
             <motion.div
-              className="m-10 w-1/2 bg-slate-500 bg-clip-text sm:text-left text-center text-2xl tracking-[-0.02em] text-transparent drop-shadow-sm "
+              className="m-10 w-1/2 bg-white bg-clip-text sm:text-left text-center text-2xl tracking-[-0.02em] text-transparent drop-shadow-sm "
               variants={FADE_DOWN_ANIMATION_VARIANTS}
             >
               <p>

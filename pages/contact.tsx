@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Layout from "@/components/layout";
-import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
 import JSXStyle from "styled-jsx/style";
 
 const Contact = () => {
@@ -40,11 +39,6 @@ const Contact = () => {
   };
   return (
     <Layout>
-      <JSXStyle>
-        {`
-          
-        `}
-      </JSXStyle>
       <div className="relative col-span-1 my-10 mx-10 flex flex-col items-center justify-center overflow-hidden rounded-lg bg-black bg-opacity-50 md:mx-20 lg:mx-32 xl:mx-32 2xl:mx-32">
         {isSubmitted ? (
           <div className="m-20 flex h-full w-full flex-col items-center justify-center">
@@ -68,7 +62,7 @@ const Contact = () => {
             className="m-20 flex h-full w-full flex-col items-center justify-center"
             onSubmit={handleSubmit}
           >
-            <h1 className="mb-10 pt-10 text-6xl font-bold text-slate-500">
+            <h1 className="mb-10 pt-10 text-6xl font-bold text-white">
               Contact
             </h1>
 
