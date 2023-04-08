@@ -15,7 +15,7 @@ const About = () => {
 
         <div className="flex flex-col items-center justify-center text-center">
           <motion.div
-            className="m-10 w-1/2 bg-white bg-clip-text text-center text-2xl tracking-[-0.02em] text-transparent drop-shadow-sm sm:text-left "
+            className="m-10 md:w-1/2 bg-white bg-clip-text text-center text-2xl tracking-[-0.02em] text-transparent drop-shadow-sm"
             variants={FADE_DOWN_ANIMATION_VARIANTS}
           >
             <p>

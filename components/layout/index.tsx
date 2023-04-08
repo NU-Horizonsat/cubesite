@@ -5,7 +5,8 @@ import Link from "next/link";
 import { ReactNode, useState } from "react";
 import useScroll from "@/lib/hooks/use-scroll";
 import Meta from "./meta";
-import useMediaQuery from '@mui/material/useMediaQuery'
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 export default function Layout({
   meta,
@@ -24,7 +25,7 @@ export default function Layout({
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
-  const isMobile = useMediaQuery('(max-width:600px)');
+  const isMobile = useMediaQuery("(max-width:600px)");
   return (
     <>
       <Meta {...meta} />
@@ -49,9 +50,9 @@ export default function Layout({
             ></Image>
           </Link>
           {isMobile ? (
-            <div>
+            <div className="">
               <button
-                className="inline-block rounded-md p-2 text-white hover:text-slate-500 focus:outline-none"
+                className="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-slate-500 focus:outline-none"
                 onClick={toggleMenu}
               >
                 <svg
@@ -69,32 +70,61 @@ export default function Layout({
               <AnimatePresence>
                 {isMenuOpen && (
                   <motion.div
-                    className="absolute top-0 left-0 flex h-full w-full flex-col items-center justify-center bg-gray-900 p-5"
+                    className="absolute top-0 left-0 z-50 w-full rounded-md bg-gray-900 py-2"
                     {...FADE_IN_ANIMATION_SETTINGS}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
                   >
                     <Link href="/about">
-                      <p className="md:text-md text-white transition-colors duration-300 hover:text-slate-500 sm:text-sm lg:text-lg xl:text-lg">
+                      <p className="block px-4 py-2 text-white transition-colors duration-300 hover:text-slate-500 text-center">
                         About
                       </p>
                     </Link>
                     <Link href="/teams">
-                      <p className="md:text-md text-white transition-colors duration-300 hover:text-slate-500 sm:text-sm lg:text-lg xl:text-lg">
+                      <p className="block px-4 py-2 text-white transition-colors duration-300 hover:text-slate-500 text-center">
                         Our Team
                       </p>
                     </Link>
                     <Link href="/partners">
-                      <p className="md:text-md text-white transition-colors duration-300 hover:text-slate-500 sm:text-sm lg:text-lg xl:text-lg">
+                      <p className="block px-4 py-2 text-white transition-colors duration-300 hover:text-slate-500 text-center">
                         Partners
                       </p>
                     </Link>
                     <Link href="/contact">
-                      <p className="md:text-md text-white transition-colors duration-300 hover:text-slate-500 sm:text-sm lg:text-lg xl:text-lg">
+                      <p className="block px-4 py-2 text-white transition-colors duration-300 hover:text-slate-500 text-center">
                         Contact
                       </p>
                     </Link>
+                    <button
+                      className="block px-4 py-2 text-white transition-colors duration-300 hover:text-slate-500 w-full"
+                      onClick={toggleMenu}
+                    >
+                      <svg
+                        className="inline h-6 w-6 fill-current pt-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                      >
+                        <line
+                          x1="1"
+                          y1="11"
+                          x2="11"
+                          y2="1"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                        <line
+                          x1="1"
+                          y1="1"
+                          x2="11"
+                          y2="11"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <p className="inline">Close Menu{" "}</p>
+
+                    </button>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -137,6 +167,7 @@ export default function Layout({
       </div>
       <main className=" w-full items-center justify-center py-32">
         {children}
+        <Turnstile siteKey="0x4AAAAAAAD2Ltb-7c_1rn_m" />
       </main>
       <footer className="fixed bottom-0 left-0 flex h-20 w-full flex-col items-center justify-center border-none bg-transparent backdrop-blur-xl">
         <p className="text-sm text-white">

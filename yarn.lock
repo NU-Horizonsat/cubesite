@@ -251,6 +251,11 @@
   "resolved" "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   "version" "1.2.1"
 
+"@marsidev/react-turnstile@^0.1.2":
+  "integrity" "sha512-aL1/AdES53yxPJKodT20qwJ9Fs0ZcnYRS+Z7yA8iGGFAi4roOS9iB12Ss7GJrm896hXW/YnW1aAPxc079Sad7A=="
+  "resolved" "https://registry.npmjs.org/@marsidev/react-turnstile/-/react-turnstile-0.1.2.tgz"
+  "version" "0.1.2"
+
 "@mole-inc/bin-wrapper@^8.0.1":
   "integrity" "sha512-sTGoeZnjI8N4KS+sW2AN95gDBErhAguvkw/tWdCjeM8bvxpz5lqrnd0vOJABA1A+Ic3zED7PYoLP/RANLgVotA=="
   "resolved" "https://registry.npmjs.org/@mole-inc/bin-wrapper/-/bin-wrapper-8.0.1.tgz"
