@@ -20,7 +20,7 @@ export default function Home() {
               </div>
               <b>H</b>
               <div className="inline text-[0px] transition-all duration-500 lg:group-hover:text-7xl">
-                ertz Band{" "}
+                ertz{" "}
               </div>
               <b>I</b>
               <div className="inline text-[0px] transition-all duration-500 lg:group-hover:text-7xl">
