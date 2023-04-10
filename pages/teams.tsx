@@ -37,11 +37,6 @@ export default function Teams() {
             image: '/leads/Aaron.jpg',
         },
         {
-            name: 'Ground Operations',
-            head_name: 'Helena Calatrava',
-            image: '/leads/Helena.jpg',
-        },
-        {
             name: 'Media and External Affairs',
             head_name: 'Julianne Blackman',
             image: '/leads/Julianne.jpeg',
