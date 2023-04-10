@@ -90,7 +90,7 @@ const Contact = () => {
               required
             />
             <button
-              className="transition-bg my-2 w-1/2 rounded-lg p-2 text-white duration-300 hover:bg-blue-800 hover:outline-none focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="transition-bg my-2 w-1/2 rounded-lg p-2 text-white duration-300 bg-blue-600 hover:bg-blue-900 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white"
               type="submit"
               disabled={isSubmitting}
             >

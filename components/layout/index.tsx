@@ -39,9 +39,9 @@ export default function Layout({
           <Link href="/" className="flex items-center font-display text-white">
             <Image
               src="/banner.png"
-              alt="Precedent logo"
-              width="250"
-              height="250"
+              alt="Project Horizon logo"
+              width="350"
+              height={350}
               className="mr-2 rounded-sm"
               style={{
                 maxWidth: "100%",
@@ -83,7 +83,7 @@ export default function Layout({
                     </Link>
                     <Link href="/teams">
                       <p className="block px-4 py-2 text-white transition-colors duration-300 hover:text-slate-500 text-center">
-                        Our Team
+                        Team
                       </p>
                     </Link>
                     <Link href="/partners">
@@ -146,7 +146,7 @@ export default function Layout({
                   </Link>
                   <Link href="/teams">
                     <p className="md:text-md text-white transition-colors duration-300 hover:text-slate-500 sm:text-sm lg:text-lg xl:text-lg">
-                      Our Team
+                      Team
                     </p>
                   </Link>
                   <Link href="/partners">
@@ -169,7 +169,7 @@ export default function Layout({
         {children}
         <Turnstile siteKey="0x4AAAAAAAD2Ltb-7c_1rn_m" />
       </main>
-      <footer className="fixed bottom-0 left-0 flex h-20 w-full flex-col items-center justify-center border-none bg-transparent backdrop-blur-xl">
+      <footer className="bottom-0 left-0 flex h-20 w-full flex-col items-center justify-center border-none bg-transparent backdrop-blur-xl">
         <p className="text-sm text-white">
           © 2023 Project Horizon. All rights reserved.
         </p>

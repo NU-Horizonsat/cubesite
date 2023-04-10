@@ -30,7 +30,7 @@ export function useIsMobile() {
 
 const TeamGrid = ({ teams }: TeamGridProps) => {
     const isMobile = useIsMobile();
-    const teamsPerLine = isMobile ? 1 : 3; // set the number of items per line based on screen size
+    const teamsPerLine = isMobile ? 1 : 2; // set the number of items per line based on screen size
     const teamsRows = [];
     for (let i = 0; i < teams.length; i += teamsPerLine) {
         teamsRows.push(teams.slice(i, i + teamsPerLine));
