@@ -13,14 +13,15 @@ interface PartnerCardProps {
 }
 
 const PartnerCard = ({ alt, description, image, link, linkName, width, height }: PartnerCardProps) => {
+  const isMobile = useIsMobile();
   return (
     // copied from card.tsx
-    <div className="relative col-span-1 my-10 grow overflow-hidden rounded-lg bg-black bg-opacity-50 shadow-md md:mx-20 lg:mx-32 xl:mx-32 2xl:mx-32">
-      <div className="flex h-60 items-center justify-center">
+    <div className={'relative col-span-1 my-10 overflow-hidden rounded-lg bg-black bg-opacity-50 shadow-md mx-5 ' + (isMobile ? "" : "w-1/2 ")}>
+            <div className="flex h-60 items-center justify-center">
         <Image src={image} alt={alt} width={width} height={height} />
       </div>
       <div className="m-10 text-center">
-        <div className="text-xl tracking-tight text-white md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl">
+        <div className="text-2xl tracking-tight text-white">
           <a className="text-blue-700 underline" href={link}>{linkName}</a> {description}
         </div>
       </div>
@@ -49,10 +50,10 @@ const PartnerList = ({ partners }: PartnerListProps) => {
     }
 
     return (
-        <div className={`flex flex-col gap-6 ${isMobile ? "flex-col" : "flex-wrap justify-center"}`}>
+        <div className={`flex flex-col ${isMobile ? "flex-col" : "flex-wrap justify-center"}`}>
             
             {(partnersRows?.map((row, index) => (
-                <div key={index} className={`flex ${isMobile ? "flex-col" : "justify-center"}`}>
+                <div key={index} className={`flex text-2xl${isMobile ? "flex-col" : "justify-center"}`}>
                     {row.map((partner, index) => (
                         <PartnerCard key={index} {...partner} />
                     ))}

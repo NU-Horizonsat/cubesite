@@ -1,6 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "@/components/layout";
 import JSXStyle from "styled-jsx/style";
+import { useMediaQuery } from "react-responsive";
+
+
+export function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+  const isMobileMediaQuery = useMediaQuery({ query: "(max-width: 1024px)" });
+  useEffect(() => {
+      setIsMobile(isMobileMediaQuery);
+  }, [isMobileMediaQuery]);
+  return isMobile;
+}
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -37,9 +48,10 @@ const Contact = () => {
 
     setIsSubmitting(false);
   };
+  const isMobile = useIsMobile();
   return (
     <Layout>
-      <div className="relative col-span-1 my-10 mx-10 flex flex-col items-center justify-center overflow-hidden rounded-lg bg-black bg-opacity-50 md:mx-20 lg:mx-32 xl:mx-32 2xl:mx-32">
+      <div className="relative col-span-1 my-10 mx-10 flex flex-col items-center justify-center overflow-hidden rounded-lg bg-black bg-opacity-50 sm:md-5 md:mx-20 lg:mx-32 xl:mx-32 2xl:mx-32">
         {isSubmitted ? (
           <div className="m-20 flex h-full w-full flex-col items-center justify-center">
             <h2 className="mb-5 text-4xl font-bold text-white">
@@ -67,7 +79,7 @@ const Contact = () => {
             </h1>
 
             <input
-              className="w-1/2 p-2 my-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+              className={" p-2 my-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" + (isMobile ? " w-11/12" : " w-3/4")}
               type="text"
               placeholder="Name"
               value={name}
@@ -75,7 +87,7 @@ const Contact = () => {
               required
             />
             <input
-              className="w-1/2 p-2 my-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+              className={" p-2 my-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"+ (isMobile ? " w-11/12" : " w-3/4")}
               type="email"
               placeholder="Email"
               value={email}
@@ -83,7 +95,7 @@ const Contact = () => {
               required
             />
             <textarea
-              className="w-1/2 p-2 my-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+              className={"p-2 my-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"+ (isMobile ? " w-11/12" : " w-3/4")}
               placeholder="Message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
