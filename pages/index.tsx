@@ -9,7 +9,7 @@ export default function Home() {
     <Layout>
       <div className="flex flex-col items-center justify-center">
         <motion.h1
-          className="sticky bg-slate-500 bg-clip-text text-center font-display text-4xl font-bold text-transparent drop-shadow-sm sm:text-left md:text-7xl"
+          className="sticky bg-slate-500 bg-clip-text text-center font-display text-4xl font-bold text-transparent drop-shadow-sm md:text-7xl"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <div className="group m-10 inline text-white">
@@ -42,6 +42,7 @@ export default function Home() {
             </div>
           </div>
         </motion.h1>
+        <motion.h3 className='sticky bg-slate-400 bg-clip-text text-center font-display text-lg font-bold text-transparent drop-shadow-sm'>Northeastern's first in-house developed satellite. The world's first terahertz band link in space</motion.h3>
         <div className="top-10 w-auto items-center justify-center">
           <model-viewer
             src="\CubeSatRender.glb"
@@ -60,6 +61,7 @@ export default function Home() {
             camera-orbit="0deg 90deg 95%"
             ios-src="\CubeSatRender.glb"
           ></model-viewer>
+
         </div>
         <div className="flex flex-col items-center justify-center text-center">
           <motion.div

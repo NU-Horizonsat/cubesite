@@ -16,7 +16,7 @@ const PartnerCard = ({ alt, description, image, link, linkName, width, height }:
   const isMobile = useIsMobile();
   return (
     // copied from card.tsx
-    <div className={'relative col-span-1 my-10 overflow-hidden rounded-lg bg-black bg-opacity-50 shadow-md mx-5 ' + (isMobile ? "" : "w-1/2 ")}>
+    <div className={'relative grow col-span-1 my-10 overflow-hidden rounded-lg bg-black bg-opacity-50 shadow-md mx-5 ' + (isMobile ? "" : "w-1/2 ")}>
             <div className="flex h-60 items-center justify-center">
         <Image src={image} alt={alt} width={width} height={height} />
       </div>

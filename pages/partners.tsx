@@ -42,6 +42,15 @@ export default function Partners() {
         width: 640,
         height: 139,
     },
+    {
+        title: "NU Wireless",
+        description: "NU Wireless is a student run organization on Northeastern Campus that specializes in wireless radio communications, especially with handheld HAM radios. Together, Project Horizon and NU Wireless are building a ground station capable of direct communications with our satellite for data uplink and downlink capabilities.",
+        image: '/partners/nuwireless.png',
+        link: "https://www.nuwireless.org/",
+        linkName: "NU Wireless",
+        width: 200,
+        height: 200,
+    }
     
     ]
     return (
