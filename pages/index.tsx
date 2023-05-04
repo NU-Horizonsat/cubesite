@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import JSXStyle from "styled-jsx/style";
 export default function Home() {
   const [modelViewerLoaded, setModelViewerLoaded] = useState(false);
-
   useEffect(() => {
     const onInteraction = () => {
       if (modelViewerLoaded) {
@@ -15,7 +14,7 @@ export default function Home() {
 
       const modelViewer = document.createElement('script'); 
       modelViewer.type = 'module';
-      modelViewer.src = '/model-viewer.min.js'; 
+      modelViewer.src = './model-viewer.min.js'; 
       document.body.appendChild(modelViewer);
       const onProgress = (event) => {
         if (event.loaded === event.total) {
@@ -28,11 +27,12 @@ export default function Home() {
         document.body.removeEventListener('model-viewer-load', onLoad);
       }
     };
-
     document.body.addEventListener('mouseover', onInteraction, {once:true});
     document.body.addEventListener('touchmove', onInteraction, {once:true});
     document.body.addEventListener('scroll', onInteraction, {once:true});
     document.body.addEventListener('keydown', onInteraction, {once:true});
+    // load model-viewer after 2 seconds
+    setTimeout(onInteraction, 500);
   }, [modelViewerLoaded]);
 
  
@@ -77,28 +77,26 @@ export default function Home() {
         </motion.h1>
         <motion.h3 className='sticky bg-slate-400 bg-clip-text text-center font-display text-lg font-bold text-transparent drop-shadow-sm'>Northeastern's first in-house developed satellite. The world's first terahertz band link in space</motion.h3>
         <div className="top-10 w-auto items-center justify-center">
-          <model-viewer
-          id="model-viewer"
-            src="\CubeSatRender.glb"
-            poster="\poster.png"
-            alt="6U CubeSat"
-            auto-rotate
-            camera-controls
-            disable-zoom
-            interaction-prompt="none"
-            touch-action="pan-y"
-            loading="auto"
-            rotation-per-second="20deg"
-            orientation="0deg 30deg 20deg"
-            exposure="0.5"
-            scale="5 5 5"
-            camera-orbit="0deg 90deg 95%"
-            ios-src="\CubeSatRender.glb"
-          >
-        <div className="progress-bar" slot="progress-bar">
-        <div className="update-bar"></div>
-      </div>
-          </model-viewer>
+            <model-viewer
+            id="model-viewer"
+              src="\CubeSatRender.glb"
+              poster="\poster.png"
+              alt="6U CubeSat"
+              auto-rotate
+              camera-controls
+              disable-zoom
+              interaction-prompt="none"
+              touch-action="pan-y"
+              loading="auto"
+              rotation-per-second="20deg"
+              orientation="0deg 30deg 20deg"
+              exposure="0.5"
+              scale="5 5 5"
+              camera-orbit="0deg 90deg 95%"
+              ios-src="\CubeSatRender.glb"
+            >
+            </model-viewer>
+          
 
         </div>
         <div className="flex flex-col items-center justify-center text-center">
@@ -139,6 +137,10 @@ export default function Home() {
                   height: 350px;
                   top: 0;
                 }
+              }
+
+              posterbg {
+                background-image: url(./poster.png);
               }
             `}
           </JSXStyle>
