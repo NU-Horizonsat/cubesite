@@ -1,10 +1,43 @@
 import Layout from "@/components/layout";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import JSXStyle from "styled-jsx/style";
-
 export default function Home() {
+  const [modelViewerLoaded, setModelViewerLoaded] = useState(false);
+
+  useEffect(() => {
+    const onInteraction = () => {
+      if (modelViewerLoaded) {
+        return;
+      }
+      setModelViewerLoaded(true);
+
+      const modelViewer = document.createElement('script'); 
+      modelViewer.type = 'module';
+      modelViewer.src = '/model-viewer.min.js'; 
+      document.body.appendChild(modelViewer);
+      const onProgress = (event) => {
+        if (event.loaded === event.total) {
+          document.body.removeEventListener('model-viewer-progress', onProgress);
+          document.body.removeEventListener('model-viewer-load', onLoad);
+        }
+      }
+      const onLoad = () => {
+        document.body.removeEventListener('model-viewer-progress', onProgress);
+        document.body.removeEventListener('model-viewer-load', onLoad);
+      }
+    };
+
+    document.body.addEventListener('mouseover', onInteraction, {once:true});
+    document.body.addEventListener('touchmove', onInteraction, {once:true});
+    document.body.addEventListener('scroll', onInteraction, {once:true});
+    document.body.addEventListener('keydown', onInteraction, {once:true});
+  }, [modelViewerLoaded]);
+
+ 
+
+  
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center">
@@ -45,6 +78,7 @@ export default function Home() {
         <motion.h3 className='sticky bg-slate-400 bg-clip-text text-center font-display text-lg font-bold text-transparent drop-shadow-sm'>Northeastern's first in-house developed satellite. The world's first terahertz band link in space</motion.h3>
         <div className="top-10 w-auto items-center justify-center">
           <model-viewer
+          id="model-viewer"
             src="\CubeSatRender.glb"
             poster="\poster.png"
             alt="6U CubeSat"
@@ -60,7 +94,11 @@ export default function Home() {
             scale="5 5 5"
             camera-orbit="0deg 90deg 95%"
             ios-src="\CubeSatRender.glb"
-          ></model-viewer>
+          >
+        <div className="progress-bar" slot="progress-bar">
+        <div className="update-bar"></div>
+      </div>
+          </model-viewer>
 
         </div>
         <div className="flex flex-col items-center justify-center text-center">
@@ -85,12 +123,7 @@ export default function Home() {
               project, and how you can get involved!
             </p>
           </motion.div>
-          <script
-            type="module"
-            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-            async
-            defer
-          ></script>
+
 
           <JSXStyle>
             {`
