@@ -43,7 +43,7 @@ export default function Teams() {
         },
     ];
     return (
-        <Layout>
+        <Layout meta={{ title: "Teams - Project Horizon", description: "Northeastern's first in-house developed satellite. The first of its kind.", image: "/banner.png" }}>
             <motion.div
                 className="px-5 py-10 mx-auto max-w-7xl"
                 initial="hidden"

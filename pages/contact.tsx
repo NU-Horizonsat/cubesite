@@ -50,7 +50,7 @@ const Contact = () => {
   };
   const isMobile = useIsMobile();
   return (
-    <Layout>
+    <Layout meta={{ title: "Contact Us - Project Horizon", description: "Northeastern's first in-house developed satellite. The first of its kind.", image: "/banner.png" }}>
       <div className="relative col-span-1 my-10 mx-10 flex flex-col items-center justify-center overflow-hidden rounded-lg bg-black bg-opacity-50 sm:md-5 md:mx-20 lg:mx-32 xl:mx-32 2xl:mx-32">
         {isSubmitted ? (
           <div className="m-20 flex h-full w-full flex-col items-center justify-center">

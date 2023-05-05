@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
 import { motion } from "framer-motion";
+import { title } from "process";
 import React, { useEffect, useState } from "react";
 import JSXStyle from "styled-jsx/style";
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
 
   
   return (
-    <Layout>
+    <Layout meta={{ title: "Project Horizon", description: "Northeastern's first in-house developed satellite. The first of its kind.", image: "/banner.png" }}>
       <div className="flex flex-col items-center justify-center">
         <motion.h1
           className="sticky bg-slate-500 bg-clip-text text-center font-display text-4xl font-bold text-transparent drop-shadow-sm md:text-7xl"

@@ -54,7 +54,7 @@ export default function Partners() {
     
     ]
     return (
-        <Layout>
+        <Layout meta={{ title: "Partners - Project Horizon", description: "Northeastern's first in-house developed satellite. The first of its kind.", image: "/banner.png" }}>
             <motion.div
                 className="items-center justify-center"
                 initial="hidden"

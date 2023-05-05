@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <Layout>
+    <Layout meta={{ title: "About - Project Horizon", description: "Northeastern's first in-house developed satellite. The first of its kind.", image: "/banner.png" }}>
       <div className="flex flex-col items-center justify-center">
         <motion.h1
           className="sticky bg-white bg-clip-text text-center font-display text-4xl font-bold text-transparent drop-shadow-sm sm:text-left md:text-7xl"
